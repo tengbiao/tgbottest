@@ -16,6 +16,7 @@
 
     <div>
         <button type="button" onclick="onTest()">Alter</button>
+        <button type="button" onclick="onWallet()">打开钱包</button>
     </div>
     <script>
         (function () {
@@ -32,6 +33,11 @@
 
         function onTest() {
             window.Telegram.WebApp.showAlert("这里是测试的弹窗", function () { });
+        }
+
+
+        function onWallet() {
+            window.Telegram.WebApp.openTelegramLink("https://t.me/wallet?startattach");
         }
     </script>
 </body>
