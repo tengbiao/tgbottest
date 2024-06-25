@@ -8,7 +8,7 @@ import WebApp from '@twa-dev/sdk'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  
   return (
     <>
       <div>
@@ -32,6 +32,9 @@ function App() {
       <div className="card">
         <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
+        </button>
+        <button onClick={()=>WebApp.showAlert(`${WebApp?.initDataUnsafe.user?.id}`)}>
+          当前用户
         </button>
       </div>
     </>
