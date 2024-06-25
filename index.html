@@ -15,9 +15,9 @@
     <script>
         (function () {
 
-            let data = window.Telegram.WebApp.initData;
+            let data = window.Telegram.WebApp.initDataUnsafe;
             if(data)
-                document.querySelector("#initData").innerHTML = data;
+                document.querySelector("#initData").innerHTML = JSON.stringify(data);
 
         })();
     </script>
