@@ -16,7 +16,8 @@
         (function () {
 
             let data = window.Telegram.WebApp.initData;
-            document.querySelector("#initData").innerHTML = data;
+            if(data)
+                document.querySelector("#initData").innerHTML = data;
 
         })();
     </script>
