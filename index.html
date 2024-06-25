@@ -12,14 +12,22 @@
         loading...
     </div>
 
+    <div>
+        <button type="button" onclick="onTest()">Alter</button>
+    </div>
     <script>
         (function () {
-
             let data = window.Telegram.WebApp.initDataUnsafe;
             if(data)
                 document.querySelector("#initData").innerHTML = JSON.stringify(data);
 
+            window.Telegram.WebApp.expand();
+            window.Telegram.WebApp.ready();
         })();
+
+        function onTest(){
+            window.Telegram.WebApp.showAlert("这里是测试的弹窗",function(){});
+        }
     </script>
 </body>
 </html>
